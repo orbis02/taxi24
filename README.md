@@ -22,8 +22,9 @@
 
 - Configure las credenciale de la base de datos, ubicado en el archio  `config.ts`  este archivo se encuentra en la siguiente ruta src/helpers/ igual debe proporcionar el precio por kilomentros. 
 
-- Usando la consola (cmd, powershell o terminal) ingrese a la carpeta del proyecto para iniciar el proyecto ejecuatando el comando.
-
+- Usando la consola (cmd, powershell o terminal) ingrese a la carpeta del proyecto para iniciar el proyecto ejecuatando los comandos.
+$ npm i
+Una vez completado el comando anteriro ejecutar el siguiente:
 $ npm run start:dev
 
 - Luego de que el proyecto haya iniciado, dirijace nuevamente  a su editor de codigo y  cambie el parametro  migrationsRun: false a true en el archivo app.module.ts , salve los cambios. Este paso es requerido para insertar la data requerida para realizar las pruebas de los puntos solicitados.
