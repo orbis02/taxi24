@@ -24,7 +24,6 @@
 
 - Usando la consola (cmd, powershell o terminal) ingrese a la carpeta del proyecto para iniciar el proyecto ejecuatando el comando.
 
-# modo desarrollo.
 $ npm run start:dev
 
 - Luego de que el proyecto haya iniciado, dirijace nuevamente  a su editor de codigo y  cambie el parametro  migrationsRun: false a true en el archivo app.module.ts , salve los cambios. Este paso es requerido para insertar la data requerida para realizar las pruebas de los puntos solicitados.
