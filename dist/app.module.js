@@ -12,6 +12,7 @@ const typeorm_1 = require("@nestjs/typeorm");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const conductor_module_1 = require("./conductor/conductor.module");
+const config_1 = require("./helpers/config");
 const pasajero_module_1 = require("./pasajero/pasajero.module");
 const viajes_module_1 = require("./viajes/viajes.module");
 let AppModule = class AppModule {
@@ -23,17 +24,17 @@ AppModule = __decorate([
                 useFactory: async () => ({
                     name: 'default',
                     type: 'postgres',
-                    host: 'localhost',
-                    port: 5432,
-                    username: 'postgres',
-                    password: 'pg2022*',
-                    database: 'DBTaxi24',
+                    host: config_1.DB_HOST,
+                    port: config_1.DB_PORT,
+                    username: config_1.DB_USER,
+                    password: config_1.DB_PASSWORD,
+                    database: config_1.DB_DATABASE,
                     entities: [__dirname + '/**/*.entity{.ts,.js}'],
                     synchronize: true,
                     logging: false,
                     migrations: [__dirname + '/**/*.migrations{.ts,.js}'],
                     migrationsTableName: 'migrations_typeorm',
-                    migrationsRun: true,
+                    migrationsRun: false,
                 }),
             }),
             conductor_module_1.ConductorModule,
